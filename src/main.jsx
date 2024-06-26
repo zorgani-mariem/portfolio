@@ -13,6 +13,7 @@ import Resume from './pages/Resume/Resume.jsx';
 import Portfolio from './pages/Portfolio/Portfolio.jsx';
 import Contact from './pages/Contact/Contact.jsx';
 import Blogs from './pages/Blogs/Blogs.jsx';
+import BlogsDetails from './pages/Blogs/BlogsDetails.jsx';
 
 
 
@@ -39,7 +40,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/blogs",
-        element: <Blogs/>
+        element: <Blogs/> 
+      },
+      {
+        path: "/blogs/details",
+        element: <BlogsDetails/>
       }
     ]
     

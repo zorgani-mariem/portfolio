@@ -1,6 +1,20 @@
 
 
 const Contact = () => {
+
+  const sendEmail = (event) => {
+    event.preventDefault();
+
+    emailjs.sendForm('service_5g4upyl', 'template_otzy5on', event.target)
+      .then((result) => {
+        alert('Email sent successfully!');
+      }, (error) => {
+        alert('Failed to send email: ' + JSON.stringify(error));
+      });
+
+    event.target.reset(); // Clear the form after sending the email
+  };
+
   return (
     <section className="contact" data-page="contact">
 
@@ -18,27 +32,19 @@ const Contact = () => {
 
 
       <section className="contact-form">
-
-        <h3 className="h3 form-title">Contact Form</h3>
-
-        <form action="#" className="form" data-form>
-
-          <div className="input-wrapper">
-            <input type="text" name="fullname" className="form-input" placeholder="Full name" required data-form-input />
-
-            <input type="email" name="email" className="form-input" placeholder="Email address" required data-form-input />
-          </div>
-
-          <textarea name="message" className="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-          <button className="form-btn" type="submit" data-form-btn>
-            <ion-icon name="paper-plane"></ion-icon>
-            <span>Send Message</span>
-          </button>
-
-        </form>
-
-      </section>
+      <h3 className="h3 form-title">Contact Form</h3>
+      <form id="contact-form" className="form" onSubmit={sendEmail}>
+        <div className="input-wrapper">
+          <input type="text" name="fullname" className="form-input" placeholder="Full name" required />
+          <input type="email" name="email" className="form-input" placeholder="Email address" required />
+        </div>
+        <textarea name="message" className="form-input" placeholder="Your Message" required></textarea>
+        <button className="form-btn" type="submit">
+          <ion-icon name="paper-plane"></ion-icon>
+          <span>Send Message</span>
+        </button>
+      </form>
+    </section>
 
     </section>
   );

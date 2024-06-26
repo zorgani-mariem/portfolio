@@ -8,20 +8,20 @@ const Aside = () => {
         <aside className='sidebar'>
             <div className='sidebar-info'>
                 <figure className='avatar-box'>
-                    <img src="/images/logo.png" alt="" width="80"/>
+                    <img src="/images/personne.jpg" alt="" width="80"/>
                 </figure>
                 <div className='info-content'>
                     <h1 className='name'>Zorgani Mariem</h1>
                     <p className='title'>Web Developer</p>
                 </div>
-                <button className='info_more-btn'>
+                <button className='info_more-btn' data-sidebar-btn>
                         <span>Show Contacts</span>
                         <GiClawSlashes />
 
                 </button>
             </div>
             {/*contact info */}
-            <div className='siberbar-info_more'>
+            <div className='sidebar-info_more'>
                 <hr className='separator2'/>
                 <ul className='contacts-list'>
                     <li className='contact-item'>
@@ -74,6 +74,31 @@ const Aside = () => {
                         </div>
                     </li>
                 </ul>
+                <hr className='separator2'/>
+                <ul className="social-list">
+
+                    <li className="social-item">
+                        <div className="icon-box">
+                            <a href="https://www.facebook.com/merirm.meriouma?mibextid=rS40aB7S9Ucbxw6v" className="social-link">
+                                <img src="/images/facebook.png" alt="Facebook" className="social-icon" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            </a>
+                        </div>
+                    </li>
+                    <li className="social-item">
+                        <div className="icon-box">
+                            <a href="https://www.instagram.com/meriem.zorgani/" className="social-link">
+                            <img src="/images/instagram.png" alt="instagram" className="social-icon" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            </a>
+                        </div>
+                    </li>
+                    <li className="social-item">
+                        <div className="icon-box">
+                            <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" className="social-link">
+                            <img src="/images/linkedin2.png" alt="linkedin" className="social-icon" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            </a>
+                        </div>
+                    </li>
+                </ul> 
             </div>
         </aside>
   )
