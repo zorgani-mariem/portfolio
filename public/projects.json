@@ -5,6 +5,13 @@
       "category": "Web development",
       "image": "images/project1.png",
       "lien" :"https://www.by3li.com/"
+    },
+    {
+      "id": 2,
+      "title": "EcoMart",
+      "category": "Web development",
+      "image": "images/EcoMart.png",
+      "lien" :"https://spiffy-stroopwafel-851d37.netlify.app/"
     }
   ]
   
